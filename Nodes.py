@@ -10,7 +10,7 @@ def intro_tts_node(state: State) -> State:
     getText = tools.get_tts()
     print(getText)
     state["messages"].append(HumanMessage(content=getText))
-    
+
     return state
 
 def base_llm_node(state: State) -> State:
@@ -20,4 +20,15 @@ def base_llm_node(state: State) -> State:
     response = llm.invoke([messages[-1]])
     state["messages"].append(AIMessage(content=response.content))
     
+    return state
+
+# TODO: Honestly unsure if this node needs to continue state updates. It's just a txt-speech node, maybe as a log..
+def outro_tts_node(state: State) -> State:
+    tools = Tools()
+    getAudioData = tools.get_elev_voice(text=(state["messages"][-1].content))
+    # TODO: Make sure to add the proper value
+    log = (f"SPOKEN: {getAudioData}")
+    print(log)
+    state["messages"].append(AIMessage(content=log))
+
     return state

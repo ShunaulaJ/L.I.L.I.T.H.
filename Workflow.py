@@ -10,9 +10,11 @@ invokeApp = True
 workflow = StateGraph(State)
 workflow.add_node("intro_tts_node", intro_tts_node)
 workflow.add_node("base_llm_node", base_llm_node)
+workflow.add_node("outro_tts_node", outro_tts_node)
 
 workflow.set_entry_point("intro_tts_node")
 workflow.add_edge("intro_tts_node", "base_llm_node")
+workflow.add_edge("base_llm_node", "outro_tts_node")
 
 
 
