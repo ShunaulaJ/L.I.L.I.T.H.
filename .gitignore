@@ -1,0 +1,18 @@
+# Node.js deps
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment
+.env
+.venv
+
+# OS/editor junk
+.DS_Store
+*.log
+
+# Playground folder
+/playground/
+
