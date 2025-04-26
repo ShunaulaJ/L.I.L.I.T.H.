@@ -11,3 +11,9 @@ Living in loops Improving Through Havoc
 
 
 - **Background Watch (JYTHONSHAA)**: [Tips for building AI agents](https://www.youtube.com/watch?v=LP5OCa20Zpg)  
+
+
+# Tech Stack
+- Voice Transcriber: WhisperAI
+- Voice Response: Eleven Labs AI Voice
+- Base Model: OpenAI
