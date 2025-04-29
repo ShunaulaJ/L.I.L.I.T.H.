@@ -3,11 +3,11 @@ import os
 import streamlit as st
 from tempfile import NamedTemporaryFile
 from audiorecorder import audiorecorder
-from Controllers.HomeMediatingController import HomeMediatingController
+from MediatingControllers.HomeMediatingController import HomeMediatingController
 from AppCoordinator import AppCoordinator
-from ToolKit import Tools
-from Workflow import APP
-from States import State
+from Agents.ToolKit import Tools
+from Agents.Workflow import APP
+from Agents.States import State
 
 # TODO: Log is reseting.. is State reseting? or just the log value
 # TODO: Deactivate button for submitting code twice.

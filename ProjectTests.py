@@ -1,11 +1,11 @@
 import unittest
-from Controllers.HomeMediatingController import HomeMediatingController
+from MediatingControllers.HomeMediatingController import HomeMediatingController
 
 
 from langchain.schema import HumanMessage
-from Workflow import APP
-from States import *
-from ToolKit import Tools
+from Agents.Workflow import APP
+from Agents.States import *
+from Agents.ToolKit import Tools
 from AppCoordinator import *
 import timeit
 '''

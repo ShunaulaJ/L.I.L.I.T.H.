@@ -4,12 +4,14 @@ import os
 # Add the project root directory to Python's path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# TODO: Maybe at some point we'll import via entire agents?? wrapper library?? 
+
 import gradio as gr
-from Controllers.HomeMediatingController import HomeMediatingController
+from MediatingControllers.HomeMediatingController import HomeMediatingController
 from AppCoordinator import AppCoordinator
-from ToolKit import Tools
-from Workflow import APP
-from States import State
+from Agents.ToolKit import Tools
+from Agents.Workflow import APP
+from Agents.States import State
 import traceback
 
 def safe_audio_handler(audio, controller):
