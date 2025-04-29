@@ -1,5 +1,6 @@
 # 🧠 LILITH
-Living in loops Improving Through Havoc
+Living in loops Improving Through 
+Havoc
 
 
 ## _📚 helped my two brain cells connect_
